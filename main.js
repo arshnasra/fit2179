@@ -547,7 +547,7 @@ const stateMap = {
 
     {
       "data": {
-        "url": "bbl_teams.csv"
+        "url": "bbl teams.csv"
       },
 
       "mark": {
