@@ -525,45 +525,73 @@ const stateMap = {
   "height": 500,
   "title": "Big Bash League Teams Across Australia",
   "projection": {"type": "mercator", "center": [134, -28], "scale": 700},
+
   "layer": [
     {
       "data": {
         "url": "https://raw.githubusercontent.com/vega/vega-datasets/main/data/world-110m.json",
-        "format": {"type": "topojson", "feature": "countries"}
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
       },
-      "transform": [{"filter": "datum.id == 36"}],
-      "mark": {"type": "geoshape", "fill": "#eeeeee", "stroke": "#999999"}
+      "transform": [
+        {"filter": "datum.id == 36"}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eeeeee",
+        "stroke": "#999999"
+      }
     },
+
     {
       "data": {
-        "values": [
-          {"team":"Perth Scorchers","city":"Perth","state":"WA","lon":115.86,"lat":-31.95,"titles":5},
-          {"team":"Adelaide Strikers","city":"Adelaide","state":"SA","lon":138.60,"lat":-34.93,"titles":1},
-          {"team":"Melbourne Stars","city":"Melbourne","state":"VIC","lon":144.96,"lat":-37.81,"titles":0},
-          {"team":"Melbourne Renegades","city":"Melbourne","state":"VIC","lon":145.02,"lat":-37.84,"titles":1},
-          {"team":"Sydney Sixers","city":"Sydney","state":"NSW","lon":151.21,"lat":-33.87,"titles":3},
-          {"team":"Sydney Thunder","city":"Sydney","state":"NSW","lon":151.05,"lat":-33.85,"titles":1},
-          {"team":"Brisbane Heat","city":"Brisbane","state":"QLD","lon":153.03,"lat":-27.47,"titles":2},
-          {"team":"Hobart Hurricanes","city":"Hobart","state":"TAS","lon":147.32,"lat":-42.88,"titles":0}
-        ]
+        "url": "bbl_teams.csv"
       },
-      "mark": {"type": "circle", "opacity": 0.9, "stroke": "white", "strokeWidth": 2},
+
+      "mark": {
+        "type": "circle",
+        "opacity": 0.9,
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+
       "encoding": {
-        "longitude": {"field": "lon", "type": "quantitative"},
-        "latitude": {"field": "lat", "type": "quantitative"},
-        "size": {"field": "titles", "type": "quantitative", "scale": {"range": [250, 2500]}, "title": "BBL Titles"},
-        "color": {"field": "state", "type": "nominal", "title": "State"},
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+
+        "size": {
+          "field": "titles",
+          "type": "quantitative",
+          "scale": {
+            "range": [250, 2500]
+          },
+          "title": "BBL Titles"
+        },
+
+        "color": {
+          "field": "city",
+          "type": "nominal",
+          "title": "City"
+        },
+
         "tooltip": [
           {"field": "team"},
           {"field": "city"},
-          {"field": "state"},
           {"field": "titles", "title": "BBL Titles"}
         ]
       }
     }
   ]
 };
-
 vegaEmbed("#map", stadiumMap, embedOpt);
 vegaEmbed("#capacity", capacityChart, embedOpt);
 vegaEmbed("#tiers", tiers, embedOpt);
