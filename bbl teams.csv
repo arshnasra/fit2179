@@ -1,9 +1,9 @@
-team,city,titles
-Adelaide Strikers,Adelaide,1
-Brisbane Heat,Brisbane,2
-Hobart Hurricanes,Hobart,1
-Melbourne Renegades,Melbourne,1
-Melbourne Stars,Melbourne,0
-Perth Scorchers,Perth,6
-Sydney Sixers,Sydney,3
-Sydney Thunder,Sydney,1 
+team,city,lon,lat,titles
+Adelaide Strikers,Adelaide,138.60,-34.93,1
+Brisbane Heat,Brisbane,153.03,-27.47,2
+Hobart Hurricanes,Hobart,147.32,-42.88,1
+Melbourne Renegades,Melbourne,145.02,-37.84,1
+Melbourne Stars,Melbourne,144.96,-37.81,0
+Perth Scorchers,Perth,115.86,-31.95,6
+Sydney Sixers,Sydney,151.21,-33.87,3
+Sydney Thunder,Sydney,151.05,-33.85,1
