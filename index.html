@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cricket in Australia</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <p class="tag">FIT2179 DATA VISUALISATION</p>
+    <h1>Cricket in Australia</h1>
+    <h2>From national tradition to modern entertainment</h2>
+    <p>
+      Cricket has long been part of Australia’s sporting identity. This visualisation explores how the sport is connected to place, stadiums, scoring evolution, international success and the rise of the Big Bash League.
+    </p>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">01 / Stadium Culture</p>
+    <h2>Where cricket lives</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>Cricket in Australia is strongly connected to major cities and large public venues.</p>
+        <p>The map shows how major cricket stadiums are distributed across Australia.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key idea</h3>
+        <p>Cricket’s popularity is partly geographic, anchored by large venues and city pride.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="map"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">02 / Venue Scale</p>
+    <h2>The MCG dominates the cricket stage</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>Stadium capacity helps explain why some venues carry more symbolic weight than others.</p>
+        <p>The MCG sits in its own category compared with other Australian cricket venues.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Reading the chart</h3>
+        <p>Longer lines represent larger capacities.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="capacity"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">03 / Venue Tiers</p>
+    <h2>Most venues are much smaller</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>Grouping stadiums into capacity tiers shows that mega-scale venues are rare.</p>
+        <p>This affects crowd potential and the atmosphere of major cricket events.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Why this matters</h3>
+        <p>Venue size affects attendance records and commercial potential.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="tiers"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">04 / The Game Became Faster</p>
+    <h2>From patience to pace</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>Traditional Test cricket rewards patience and endurance.</p>
+        <p>ODI cricket changed the rhythm of the sport by encouraging faster scoring.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Story link</h3>
+        <p>Faster scoring prepared audiences for shorter T20 cricket.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="runrate"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">05 / T20 Scoring</p>
+    <h2>BBL scoring has become faster</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>The Big Bash League shows how short-format cricket pushes scoring rates upward.</p>
+        <p>This chart uses BBL match data to show the change in runs per over across seasons.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key insight</h3>
+        <p>The newest BBL seasons have produced some of the highest scoring rates in the dataset.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="bblRunrate"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">06 / Australia vs the World</p>
+    <h2>Australia remains elite, but the world has caught up</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>Australia has historically been one of cricket’s strongest nations.</p>
+        <p>The heatmap compares team ratings across Test, ODI and T20 cricket.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key insight</h3>
+        <p>Dominance is no longer universal. Different nations now specialise in different formats.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="heatmap"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">07 / Ranking Race</p>
+    <h2>Who rises and falls across formats?</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>As cricket formats changed, international strength also became more specialised.</p>
+        <p>The bump chart shows how team positions move across Test, ODI and T20 rankings.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key insight</h3>
+        <p>Australia remains strong, but India and England show how success shifts across formats.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="bump"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">08 / World Cup Success</p>
+    <h2>Australia stands out in global tournaments</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>World Cup history adds a tournament perspective to Australia’s cricket success.</p>
+        <p>This chart compares tournament wins by country using the ICC World Cup dataset.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key insight</h3>
+        <p>Australia’s success is not only reflected in rankings, but also in repeated tournament wins.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="worldCupWins"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">09 / T20 Entertainment</p>
+    <h2>The Big Bash League turned cricket into a crowd product</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>The Big Bash League represents the entertainment side of modern cricket.</p>
+        <p>BBL attendance recovered strongly after COVID-affected seasons.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Main takeaway</h3>
+        <p>T20 changed cricket into a faster, more commercial entertainment product.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="bbl"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">10 / T20 Tactics</p>
+    <h2>Captains increasingly choose to bowl first</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>T20 cricket is shaped by tactics as much as batting power.</p>
+        <p>The BBL match data shows how toss decisions have changed across seasons.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key insight</h3>
+        <p>Bowling first has become much more common in recent BBL seasons.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="tossTrends"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">11 / Stadium Scoring</p>
+    <h2>Some venues produce more explosive matches</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>Venue conditions shape how T20 cricket is played.</p>
+        <p>This chart ranks BBL venues by average match runs using match data.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Why this matters</h3>
+        <p>High-scoring venues strengthen the entertainment value of modern T20 cricket.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="venueScoring"></div></div>
+  </section>
+
+  <section class="panel">
+    <p class="chapter">12 / BBL Geography</p>
+    <h2>T20 cricket is spread across major Australian cities</h2>
+
+    <div class="story-grid">
+      <div>
+        <p>The Big Bash League connects cricket to major Australian cities through franchise teams.</p>
+        <p>This map shows where BBL teams are based and how titles are distributed geographically.</p>
+      </div>
+      <div class="insight-box">
+        <h3>Key insight</h3>
+        <p>Modern cricket is both a sporting competition and a city-based entertainment network.</p>
+      </div>
+    </div>
+
+    <div class="chart"><div id="stateMap"></div></div>
+  </section>
+
+  <section class="ending">
+    <h2>Cricket is no longer the same game</h2>
+    <p>
+      Australia’s cricket identity still depends on stadiums, tradition and national success. But the modern game is faster, more global and increasingly shaped by T20 entertainment.
+    </p>
+  </section>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
